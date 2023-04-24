@@ -3,12 +3,13 @@ import LayoutAdmin from "../layout/layoutAdmin/LayoutAdmin";
 import { ToastContainer } from "react-toastify";
 import LayoutUser from "../layout/layoutUser/LayoutUser";
 import { myContext } from "../context/myContext";
+import HomeAdmin from "../admin_components/HomeAdmin";
 
 const AppRouter = () => {
 
 
 
-  
+
   return (
     <Router>
       <myContext.Provider value={{
@@ -22,9 +23,9 @@ const AppRouter = () => {
 
 
 
-
+{/* Admin Layout */}
        <Route path="/admin" element={<LayoutAdmin />}>
-                
+       <Route index element={<HomeAdmin/>}/>
        </Route>
 
          {/* Not Found */}
