@@ -3,9 +3,21 @@ import React from 'react'
 const HeaderAdmin = () => {
 
   return (
-    <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
+    <div className="flex">
+
+    <div>
+      <h1 className='ml-5'>Admin</h1>
+    </div>
+
+    <div>
+      <ul className='flex ml-[100px]'>
+        <li className='ml-5'>Products</li>
+        <li className='ml-5'>Categories</li>
+        <li className='ml-5'>Users</li>
+      </ul>
+    </div>
+
+  </div>
   )
 }
 
