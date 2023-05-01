@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import { API_URL, doApiGet, doApiMethod } from '../services/services';
+import { useNavigate } from 'react-router-dom';
 
 const UserList = () => {
 
     const [ar, setAr] = useState([]);
+    const nav = useNavigate();
 
     useEffect(() => {
         doApi();
@@ -20,6 +22,7 @@ const UserList = () => {
         catch (err) {
             console.log(err)
             alert("There problem , come back late")
+            nav("/admin/login")
         }
 
     }
