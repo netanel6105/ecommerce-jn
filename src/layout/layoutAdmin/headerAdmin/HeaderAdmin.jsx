@@ -12,12 +12,12 @@ function HeaderAdmin() {
       </div>
 
       <div>
-        <ul className="flex ml-[100px] text-4xl">
-          <li className="ml-9">Products</li>
-          <li className="ml-9">Categories</li>
-          <li className="ml-9">Users</li>
+        <div className="flex ml-[100px] text-4xl">
+          <Link className="ml-9">Products</Link>
+          <Link className="ml-9">Categories</Link>
+          <Link className="ml-9">Users</Link>
           {/* <AccountCircleIcon /> */}
-        </ul>
+        </div>
       </div>
     </div>
   );

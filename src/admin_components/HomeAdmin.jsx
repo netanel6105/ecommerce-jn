@@ -3,7 +3,13 @@ import React from 'react'
 const HomeAdmin = () => {
     
   return (
-    <div>HomeAdmin</div>
+    <div>
+      <div>
+        <h1 className="mt-[50px] text-center text-4xl">
+          Welcome to Admin Side!
+        </h1>
+      </div>
+    </div>
   )
 }
 
