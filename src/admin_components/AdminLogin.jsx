@@ -2,7 +2,7 @@ import React from 'react'
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 import { API_URL, doApiMethod, TOKEN_KEY } from '../services/services';
-
+import "./login.css";
 
 const AdminLogin = () => {
 
@@ -33,7 +33,7 @@ const AdminLogin = () => {
 
   return (
 <div class="w-auto max-w-lg">
-  <form onSubmit={handleSubmit(onSub)} className="bg-white pl-[300px] px-8 pt-[100px] pb-8 mb-4">
+  <form onSubmit={handleSubmit(onSub)} className="pl-[300px] px-8 pt-[100px] pb-8 mb-4 ">
 
     <div className="mb-4">
       <label className="block text-gray-700 text-sm font-bold mb-2">
