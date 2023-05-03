@@ -2,7 +2,7 @@ import React from 'react'
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 import { API_URL, doApiMethod, TOKEN_KEY } from '../services/services';
-import "./login.css";
+
 
 const AdminLogin = () => {
 
