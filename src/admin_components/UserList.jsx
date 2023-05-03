@@ -50,16 +50,11 @@ const UserList = () => {
 
   return (
     <div classNameName='container'>
-
-
             <div className='text-center fs-4 my-2'>
                 <h1 className=''>List of Users in the system:</h1>
             </div>
 
-            {/* <AuthAdmin /> */}
-
-
-
+          
 
             <table className="min-w-full border-collapse block md:table">
                 <thead className="block md:table-header-group">
@@ -70,9 +65,6 @@ const UserList = () => {
                         <th className="bg-gray-600 p-2 text-white font-bold md:border md:border-grey-500 text-left block md:table-cell">Role</th>
                     </tr>
                 </thead>
-
-
-
                 <tbody className="block md:table-row-group">
                     {ar.map((item, i) => {
                         // let myDate = item.date_created.substring(0, 10);
@@ -93,11 +85,6 @@ const UserList = () => {
                             </tr>
                         )
                     })}
-
-
-
-
-
                 </tbody>
             </table>
         </div>
