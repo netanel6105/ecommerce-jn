@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { API_URL, doApiGet, doApiMethod } from '../services/services';
 import { useNavigate } from 'react-router-dom';
+import AuthAdmin from './auth/AuthAdmin';
 
 const UserList = () => {
 
@@ -54,6 +55,7 @@ const UserList = () => {
                 <h1 className=''>List of Users in the system:</h1>
             </div>
 
+            <AuthAdmin/>
           
 
             <table className="min-w-full border-collapse block md:table">
