@@ -4,8 +4,8 @@ import { ToastContainer } from "react-toastify";
 import LayoutUser from "../layout/layoutUser/LayoutUser";
 import { myContext } from "../context/myContext";
 
-import UserList from "../admin_components/pages/UserList";
-import AdminLogin from "../admin_components/AdminLogin";
+import UserList from "../admin_components/pages/users/UserList";
+import AdminLogin from "../admin_components/pages/AdminLogin";
 
 const AppRouter = () => {
 
