@@ -12,6 +12,7 @@ import ProductList from "../admin_components/pages/products/ProductList";
 
 import Comment from "../admin_components/pages/Comment";
 import ToDolist from "../admin_components/pages/ToDolist";
+import EditProducts from "../admin_components/pages/products/EditProducts";
 
 const AppRouter = () => {
   return (
@@ -27,6 +28,7 @@ const AppRouter = () => {
             <Route path="/admin/category" element={<CategoryList />} />
 
             <Route path="/admin/product" element={<ProductList />} />
+            <Route path="/admin/product/edit/:id" element={<EditProducts />} />
 
             <Route path="/admin/users" element={<UserList />} />
             <Route path="/admin/comment" element={<Comment />} />
