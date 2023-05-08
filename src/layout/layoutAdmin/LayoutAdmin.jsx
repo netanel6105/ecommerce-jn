@@ -3,7 +3,7 @@ import HeaderAdmin from './headerAdmin/HeaderAdmin'
 import {Outlet} from 'react-router-dom'
 const LayoutAdmin = () => {
   return (
-    <div>
+    <div className='flex'>
         <HeaderAdmin/>
         <Outlet/>
     </div>
