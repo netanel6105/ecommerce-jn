@@ -3,8 +3,8 @@ import LayoutAdmin from "../layout/layoutAdmin/LayoutAdmin";
 import { ToastContainer } from "react-toastify";
 import LayoutUser from "../layout/layoutUser/LayoutUser";
 import { myContext } from "../context/myContext";
-import HomeAdmin from "../admin_components/HomeAdmin";
-import UserList from "../admin_components/UserList";
+
+import UserList from "../admin_components/pages/UserList";
 import AdminLogin from "../admin_components/AdminLogin";
 
 const AppRouter = () => {
@@ -27,7 +27,7 @@ const AppRouter = () => {
 
           {/* Admin Layout */}
           <Route path="/admin" element={<LayoutAdmin />}>
-            <Route index element={<HomeAdmin />} />
+           
             <Route path="/admin/login" element={<AdminLogin/>}/>
 
 

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import { API_URL, doApiGet, doApiMethod } from '../services/services';
+import { API_URL, doApiGet, doApiMethod } from '../../services/services';
 import { useNavigate } from 'react-router-dom';
-import AuthAdmin from './auth/AuthAdmin';
+import AuthAdmin from '../auth/AuthAdmin';
 
 const UserList = () => {
 
