@@ -74,7 +74,7 @@ const UserList = () => {
       <div >
        <NavLink className="bg-blue-400 rounded-md py-2 px-2 font-medium"  to= '/admin/users/add'>  Add User </NavLink>
       </div>
-
+{/* chang */}
       <div className='ml-96'>
          <Pagination apiPages={API_URL+"/users/count?perPage=5"}
           linkTo={"/admin/users?page="}
@@ -96,7 +96,7 @@ const UserList = () => {
       
       {ar.map((item,i)=> {
         return(
-          <tr className="hover:bg-gray-50">
+          <tr  className="hover:bg-gray-50">
           <th className="flex gap-3 px-6 py-4 font-normal text-gray-900">
             {/* name-img */}
             <div className="relative h-10 w-10">

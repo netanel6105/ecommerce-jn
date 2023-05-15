@@ -10,7 +10,7 @@ const Pagination = (props) => {
 
     useEffect(()=>{
       doApi();
-    })
+    },[props.apiPages]) //change
 
     const doApi = async() => {
         //   let url = `http://localhost:3001/products/count?perPage=5`
@@ -25,11 +25,11 @@ const Pagination = (props) => {
   return (
     <div>
     <span className='text-white font-medium' >Page: </span>
-   {[...Array(pages)].map((item,i) => {
-     return(
-       <Link to={props.linkTo+(i+1)} key={i} className={props.linkCss}>{i+1}</Link>
-     )
-   })}
+    {[...Array(pages)].map((item,i) => {
+        return(
+          <Link to={props.linkTo+(i+1)} key={i} className={props.linkCss}>{i+1}</Link>
+        )
+      })}
 
  </div>
   )
