@@ -77,7 +77,7 @@ const UserList = () => {
 {/* chang */}
       <div className='ml-96'>
          <Pagination apiPages={API_URL+"/users/count?perPage=5"}
-          linkTo={"/admin/users?page="}
+          linkTo={"/admin/users?page"}
           linkCss={"font-medium me-2 bg-blue-400 p-2 rounded-md"}/>
       </div>
    </div>
