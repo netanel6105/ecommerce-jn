@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import { useNavigate, useSearchParams } from 'react-router-dom';
+import { NavLink, useNavigate, useSearchParams } from 'react-router-dom';
 import { API_URL, doApiGet, doApiMethod } from '../../../services/services';
+import Loading from '../../../global/Loading';
+import Pagination from '../../../global/Pagination';
 
 const ProductList = () => {
   const [getQuery] = useSearchParams();
@@ -52,51 +54,72 @@ const ProductList = () => {
   
 
   return (
-    <div class="overflow-hidden w-screen rounded-lg border border-gray-200 shadow-md m-5">
-    <table class="w-full border-collapse bg-white text-left text-sm text-gray-500">
-      <thead class="bg-gray-50">
+    <div className="overflow-hidden w-full rounded-lg border border-gray-200 shadow-md m-5">
+     
+    <div className='bg-gray-800 flex p-4'>
+     
+      <div >
+      <NavLink className="bg-blue-400 rounded-md py-2 px-2 font-medium"  to= '/admin/product/new'>  Add New Product </NavLink>
+      </div>
+    
+      <div className='ml-96'>
+         <Pagination apiPages={API_URL+"/products/count?perPage=5"}
+          linkTo={"/admin/product?page="}
+          linkCss={"font-medium mx-1 bg-blue-400 p-2 rounded-md"}/>
+      </div>
+
+    </div>
+
+      {loading && <Loading/>}
+    <table className="w-full border-collapse bg-white text-left text-sm text-gray-500">
+      <thead className="bg-gray-50">
         <tr>
-          <th scope="col" class="px-6 py-4 font-medium text-gray-900">Img_url</th>
-          <th scope="col" class="px-6 py-4 font-medium text-gray-900">Name</th>
-          <th scope="col" class="px-6 py-4 font-medium text-gray-900">Price</th>
-          <th scope="col" class="px-6 py-4 font-medium text-gray-900">Description</th>
-          <th scope="col" class="px-6 py-4 font-medium text-gray-900">Gender</th>
-          <th scope="col" class="px-6 py-4 font-medium text-gray-900">Category_name</th>
-          <th scope="col" class="px-6 py-4 font-medium text-gray-900">Del/Edit</th>
+          <th scope="col" className="px-6 py-4 font-medium text-gray-900">Img_url</th>
+          <th scope="col" className="px-6 py-4 font-medium text-gray-900">Name</th>
+          <th scope="col" className="px-6 py-4 font-medium text-gray-900">Price</th>
+          <th scope="col" className="px-6 py-4 font-medium text-gray-900">Description</th>
+          <th scope="col" className="px-6 py-4 font-medium text-gray-900">Gender</th>
+          <th scope="col" className="px-6 py-4 font-medium text-gray-900">Category_name</th>
+          <th scope="col" className="px-6 py-4 font-medium text-gray-900">Del/Edit</th>
         </tr>
       </thead>
          
-      <tbody class="divide-y divide-gray-100 border-t border-gray-100">
+      <tbody className="divide-y divide-gray-100 border-t border-gray-100">
+        
         {ar.map((item,i)=>{
           return(
-            <tr class="hover:bg-gray-50">
-            <th class="flex gap-3 px-6 py-4 font-normal text-gray-900">
+            <tr className="hover:bg-gray-50">
+            <th className="flex gap-3 px-6 py-4 font-normal text-gray-900">
               {/* name-img */}
-              <div class="relative h-10 w-10">
-                <img  class="h-full w-full  object-cover object-center" src={item.img_url} alt={item.name} />
+              <div className="relative h-10 w-10">
+                <img  className="h-full w-full  object-cover object-center" src={item.img_url} alt={item.name} />
               </div>
             </th>
-          
+              
+    
+             
+                
+    
             {/* name */}
-            <td class="px-6 py-4">
-              <span class="inline-flex items-center gap-1 rounded-full bg-green-50 px-2 py-1 text-xs font-semibold text-green-600">
-                <span class="h-1.5 w-1.5 rounded-full bg-green-600"></span>
+            <td className="px-6 py-4">
+              <span className="inline-flex items-center gap-1 rounded-full bg-green-50 px-2 py-1 text-xs font-semibold text-green-600">
+                <span className="h-1.5 w-1.5 rounded-full bg-green-600"></span>
                   {item.name}</span>
             </td>
     
             {/* price */}
-            <td class="px-6 py-4">{item.price}</td>
+            <td className="px-6 py-4">{item.price}</td>
             {/* description */}
-            <td class="px-6 py-4 cursor-pointer" title={item.description}>{item.description.substring(0,15)}</td>
+            <td className="px-6 py-4 cursor-pointer" title={item.description}>{item.description.substring(1,15)}</td>
             {/*gender  */}
-            <td class="px-6 py-4">{item.gender}</td>
+            <td className="px-6 py-4">{item.gender}</td>
             {/* category */}
-            <td class="px-6 py-4">{item.category}</td>
+            <td className="px-6 py-4">{item.category_name}</td>
           
-            <td class="px-6 py-4">
-              <div class="flex justify-start gap-4">
+            <td className="px-6 py-4">
+              <div className="flex justify-start gap-4">
                 <button onClick={()=>{
-                  onXClick(item._id)
+                  onXClick(item._id);
                 }} x-data="{ tooltip: 'Delete' }">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -104,7 +127,7 @@ const ProductList = () => {
                     viewBox="0 0 24 24"
                     stroke-width="1.5"
                     stroke="currentColor"
-                    class="h-6 w-6"
+                    className="h-6 w-6"
                     x-tooltip="tooltip">
                     <path
                       stroke-linecap="round"
@@ -122,7 +145,7 @@ const ProductList = () => {
                     viewBox="0 0 24 24"
                     stroke-width="1.5"
                     stroke="currentColor"
-                    class="h-6 w-6"
+                    className="h-6 w-6"
                     x-tooltip="tooltip">
                     <path
                       stroke-linecap="round"
@@ -137,10 +160,12 @@ const ProductList = () => {
           
           )
         })}
+      
        
       </tbody>
     </table>
   </div>
+
   )
 }
 

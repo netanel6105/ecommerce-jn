@@ -2,19 +2,23 @@ import React, { useEffect, useState } from 'react'
 import { API_URL, doApiGet, doApiMethod } from '../../../services/services'
 import AuthAdmin from '../../auth/AuthAdmin'
 import Pagination from '../../../global/Pagination'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useSearchParams } from 'react-router-dom'
 
 const UserList = () => {
-
+  const [getQuery] = useSearchParams();
   const [ar,setAr] = useState([])
 
   useEffect(()=>{
     doApi();
-  },[])
+  },[getQuery])
 
 
   const doApi = async()=>{
-    let url = API_URL+"/users/allUsers";
+    let perPage = getQuery.get("perPage") || 5;
+    let page = getQuery.get("page") || 1;
+
+    // let url = API_URL+"/users/allUsers";
+    let url = `${API_URL}/users/allUsers?page=${page}&perPage=${perPage}`;
     try {
       let data = await doApiGet(url)
       console.log(data);
@@ -76,10 +80,9 @@ const UserList = () => {
       </div>
 
       <div className='ml-96'>
-      <Pagination apiPages={API_URL+"/users/count?perPage=5"} 
-        linkTo={"/admin/users?page="} 
-        linkCss={"font-medium mx-1 bg-blue-400 p-2 rounded-md"} />
-
+         <Pagination apiPages={API_URL+"/users/count?perPage=5"}
+          linkTo={"/admin/users?page="}
+          linkCss={"font-medium mx-1 bg-blue-400 p-2 rounded-md"}/>
       </div>
 
    </div>
