@@ -3,6 +3,7 @@ import { API_URL, doApiGet, doApiMethod } from '../../../services/services'
 import AuthAdmin from '../../auth/AuthAdmin'
 import Pagination from '../../../global/Pagination'
 import { NavLink, useSearchParams } from 'react-router-dom'
+import { toast } from 'react-toastify';
 
 const UserList = () => {
   const [getQuery] = useSearchParams();
@@ -59,7 +60,7 @@ const UserList = () => {
     try {
       let data = await doApiMethod(url,'DELETE');
       if (data.deletedCount) {
-        alert("user deleted");
+        toast.info("user deleted");
         doApi();
       }
     }
