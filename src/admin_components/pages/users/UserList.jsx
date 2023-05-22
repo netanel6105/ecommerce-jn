@@ -74,12 +74,14 @@ const UserList = () => {
       <div >
        <NavLink className="bg-blue-400 rounded-md py-2 px-2 font-medium"  to= '/admin/users/add'>  Add User </NavLink>
       </div>
-{/* chang */}
+
       <div className='ml-96'>
-         <Pagination apiPages={API_URL+"/users/count?perPage=5"}
-          linkTo={"/admin/users?page"}
-          linkCss={"font-medium me-2 bg-blue-400 p-2 rounded-md"}/>
+      <Pagination apiPages={API_URL+"/users/count?perPage=5"} 
+        linkTo={"/admin/users?page="} 
+        linkCss={"font-medium mx-1 bg-blue-400 p-2 rounded-md"} />
+
       </div>
+
    </div>
   
   <table className="w-full border-collapse bg-white text-left text-sm text-gray-500">

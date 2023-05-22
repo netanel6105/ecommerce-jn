@@ -8,31 +8,35 @@ const Pagination = (props) => {
 
     const [pages, setPages] = useState();
 
-    useEffect(()=>{
+    useEffect(() => {
       doApi();
-    },[props.apiPages]) //change
-
+      
+    
+    },[props.apiPages])
+    
     const doApi = async() => {
-        //   let url = `http://localhost:3001/products/count?perPage=5`
-          
-          let resp = await doApiGet(props.apiPages);
-          console.log(resp);
-          setPages(resp.pages);
-        }// all props from productAdmin
+      //   let url = `http://localhost:3001/gamesApps/count?perPage=5`
+        
+        let resp = await doApiGet(props.apiPages);
+        console.log(resp);
+        setPages(resp.pages);
+      }// all props from appListAdmin
+      
         
         
-
-  return (
-    <div>
-    <span className='text-white font-medium' >Page: </span>
-    {[...Array(pages)].map((item,i) => {
-        return(
-          <Link to={props.linkTo+(i+1)} key={i} className={props.linkCss}>{i+1}</Link>
+        return (
+          <div>
+             
+            <span className='text-white font-medium' >Page: </span>
+            {[...Array(pages)].map((item,i) => {
+              return(
+                <Link to={props.linkTo+(i+1)} key={i} className={props.linkCss}>{i+1}</Link>
+              )
+            })}
+      
+          </div>
         )
-      })}
-
- </div>
-  )
+  
 }
 
 export default Pagination
