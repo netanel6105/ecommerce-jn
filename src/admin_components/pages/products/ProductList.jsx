@@ -114,7 +114,7 @@ const ProductList = () => {
             {/*gender  */}
             <td className="px-6 py-4">{item.gender}</td>
             {/* category */}
-            <td className="px-6 py-4">{item.category_name}</td>
+            <td className="px-6 py-4">{item.category}</td>
           
             <td className="px-6 py-4">
               <div className="flex justify-start gap-4">
