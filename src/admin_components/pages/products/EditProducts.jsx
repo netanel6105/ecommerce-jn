@@ -49,7 +49,7 @@ const EditProducts = () => {
       }
     } catch (err) {
       console.log(err);
-      alert("There problem come back later 123");
+      alert("There problem come back later");
     }
   };
 

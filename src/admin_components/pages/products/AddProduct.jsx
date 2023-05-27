@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { API_URL, doApiMethod } from "../../../services/services";
 import { toast } from "react-toastify";
@@ -11,6 +11,7 @@ const AddProduct = () => {
     formState: { errors },
   } = useForm();
   const nav = useNavigate();
+  const [error, setError] = useState('')
 
 
   const onSub = (_bodyData) => {
@@ -29,7 +30,7 @@ const AddProduct = () => {
     } 
     catch (err) {
         console.log(err);
-        alert("There problem come back later");
+        alert(err.response.data.err_msg);
       }
   };
 
