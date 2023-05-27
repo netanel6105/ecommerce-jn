@@ -18,6 +18,11 @@ function HeaderAdmin({children}) {
       icon:<FaLockOpen/>
   },
     {
+      path:"/admin/logout",
+      name:"logout",
+      icon:<FaLockOpen/>
+  },
+    {
       path:"/admin/category",
       name:"Category",
       icon:<FaSearchLocation/>

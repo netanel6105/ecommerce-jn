@@ -15,6 +15,7 @@ import ToDolist from "../admin_components/pages/ToDolist";
 import EditProducts from "../admin_components/pages/products/EditProducts";
 import AddUser from "../admin_components/pages/users/AddUser";
 import AddProduct from "../admin_components/pages/products/AddProduct";
+import AdminLogout from "../admin_components/pages/AdminLogout";
 
 const AppRouter = () => {
   return (
@@ -27,6 +28,7 @@ const AppRouter = () => {
           <Route path="/admin" element={<LayoutAdmin />}>
             <Route path="/admin/dashboard" element={<Dashboard />} />
             <Route path="/admin/login" element={<AdminLogin />} />
+            <Route path="/admin/logout" element={<AdminLogout />} />
             <Route path="/admin/category" element={<CategoryList />} />
 
             <Route path="/admin/product" element={<ProductList />} />
