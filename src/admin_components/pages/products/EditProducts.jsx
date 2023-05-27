@@ -76,7 +76,7 @@ const EditProducts = () => {
                 type="text"
                 className="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50  focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               />
-              {errors.url_gender && (
+              {errors.name && (
                 <div className="text-danger">
                   {" "}
                   * Enter valid name (min 2 chars){" "}
@@ -95,7 +95,7 @@ const EditProducts = () => {
                 type="text"
                 className="bg-gray-50 border border-gray-300 text-gray-900  rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               />
-              {errors.name && (
+              {errors.price && (
                 <div className="text-danger">
                   {" "}
                   * Enter valid price min 2 chars{" "}
@@ -115,7 +115,7 @@ const EditProducts = () => {
                 type="text"
                 className="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50  focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               />
-              {errors.url_code && (
+              {errors.category && (
                 <div className="text-danger">
                   * Enter valid category_name (min 2 chars){" "}
                 </div>
@@ -134,7 +134,7 @@ const EditProducts = () => {
                 type="text"
                 className="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50  focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               />
-              {errors.url_gender && (
+              {errors.gender && (
                 <div className="text-danger">
                   {" "}
                   * Enter valid gender (min 2 chars){" "}
@@ -155,7 +155,7 @@ const EditProducts = () => {
                 id="large-input"
                 className="block w-full p-4 text-gray-900 border border-gray-300 rounded-lg bg-gray-50  focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               />
-              {errors.name && (
+              {errors.description && (
                 <div className="text-danger">
                   {" "}
                   * Enter valid Description (min 2 chars){" "}
