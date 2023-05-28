@@ -11,7 +11,7 @@ const Dashboard = () => {
         <button onClick={()=>{
            localStorage.removeItem(TOKEN_KEY)
            nav("/admin/login")
-        }} className='text-white bg-red-700 rounded-full py-2 px-4 '>Logout</button>
+        }} className='text-white bg-red-700 rounded-full py-2 px-4 font-bold '>Logout</button>
      </div>
       
     </div>
