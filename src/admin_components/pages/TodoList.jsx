@@ -1,10 +1,12 @@
 import React from "react";
 
 const ToDolist = () => {
-  return <div >
-    {/* <!-- component --> */}
-<div class="h-100 w-full flex items-center justify-center bg-teal-lightest font-sans">
-	<div class="bg-white rounded shadow p-6 m-4 w-full lg:w-3/4 lg:max-w-lg">
+  return (
+    <div className="w-screen flex  justify-center">
+
+ {/* <!-- component --> */}
+
+ <div class="bg-white rounded shadow  p-6 m-4 w-[900px]">
         <div class="mb-4">
             <h1 class="text-grey-darkest">Todo List</h1>
             <div class="flex mt-4">
@@ -25,8 +27,11 @@ const ToDolist = () => {
             </div>
         </div>
     </div>
-</div>
-  </div>;
+    </div>
+  )
+   
+
+ 
 };
 
 export default ToDolist;
