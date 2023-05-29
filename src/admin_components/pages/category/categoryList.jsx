@@ -1,20 +1,14 @@
-import React from "react";
+import React from 'react'
 
-
-
-const CategoryList = () => {
-
-  const nav = useNavigate();
-
-
+const categoryList = () => {
 
   return (
-    
-    <div>
-      
-      
-    </div>
-    )
-};
 
-export default CategoryList;
+    <div>
+      cate
+      goryList
+    </div>
+  )
+}
+
+export default categoryList
