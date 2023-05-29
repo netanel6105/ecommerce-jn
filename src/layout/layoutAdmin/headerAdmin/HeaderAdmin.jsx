@@ -57,7 +57,7 @@ function HeaderAdmin({ children }) {
     <div className="">
 
       <div className="">
-        <Navbar />
+        
       </div>
 
       <div className="flex">

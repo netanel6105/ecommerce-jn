@@ -12,6 +12,7 @@ const AddProduct = () => {
   } = useForm();
   const nav = useNavigate();
   const [error, setError] = useState('')
+  const [img, setImg]= useState(null)
 
 
   const onSub = (_bodyData) => {
@@ -33,6 +34,12 @@ const AddProduct = () => {
         alert(err.response.data.err_msg);
       }
   };
+
+  const handleChangeImg=(event)=>{
+    setImg(event.target.value)
+    console.log("lala");
+
+  }
 
   return (
     <div>
@@ -142,7 +149,9 @@ const AddProduct = () => {
                 Img_url{" "}
               </label>
               <input
+             
                 {...register("img_url", { minLength: 2, required: false })}
+                onChange={handleChangeImg}
                 type="text"
                 className="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50  focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               />
@@ -164,7 +173,7 @@ const AddProduct = () => {
         </form>
         <div className="w-[400px] ml-20 mt-7 ">
           <h1 className="text-center">Image in Live:</h1>
-          <img src="" alt="" />
+          <img src={img} alt="" />
         </div>
       </div>
     </div>
