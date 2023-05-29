@@ -15,6 +15,8 @@ import ToDolist from "../admin_components/pages/ToDolist";
 import EditProducts from "../admin_components/pages/products/EditProducts";
 import AddUser from "../admin_components/pages/users/AddUser";
 import AddProduct from "../admin_components/pages/products/AddProduct";
+import EditCategory from "../admin_components/pages/category/EditCategory";
+import AddCategory from "../admin_components/pages/category/AddCategory";
 
 
 const AppRouter = () => {
@@ -30,6 +32,8 @@ const AppRouter = () => {
             <Route path="/admin/login" element={<AdminLogin />} />
            
             <Route path="/admin/category" element={<CategoryList />} />
+            <Route path="/admin/category/edit/:id" element={<EditCategory />} />
+            <Route path="/admin/category/new" element={<AddCategory />} />
 
             <Route path="/admin/product" element={<ProductList />} />
             <Route path="/admin/product/edit/:id" element={<EditProducts />} />

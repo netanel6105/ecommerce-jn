@@ -3,6 +3,7 @@ import { NavLink, useNavigate, useSearchParams } from 'react-router-dom';
 import { API_URL, doApiGet, doApiMethod } from '../../../services/services';
 import Loading from '../../../global/Loading';
 import Pagination from '../../../global/Pagination';
+import { toast } from 'react-toastify';
 
 const ProductList = () => {
   const [getQuery] = useSearchParams();
@@ -35,14 +36,14 @@ const ProductList = () => {
   }
 
   const onXClick = async (_delId) => {
-    if (!window.confirm("Delete app?")) {
+    if (!window.confirm("Delete Product?")) {
       return;
     }
     let url = API_URL + '/products/' + _delId;
     try {
       let data = await doApiMethod(url, 'DELETE');
       if (data.deletedCount) {
-        alert("product deleted");
+        toast.info("product deleted");
         doApi();
       }
     } catch (err) {
