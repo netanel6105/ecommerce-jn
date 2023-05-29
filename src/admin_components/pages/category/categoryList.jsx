@@ -1,7 +1,20 @@
 import React from "react";
 
+
+
 const CategoryList = () => {
-  return <div>CategoryList</div>;
+
+  const nav = useNavigate();
+
+
+
+  return (
+    
+    <div>
+      
+      
+    </div>
+    )
 };
 
 export default CategoryList;
