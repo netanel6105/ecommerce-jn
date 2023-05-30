@@ -8,6 +8,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 import AuthAdmin from "../../auth/AuthAdmin";
 import Loading from '../../../global/Loading';
+
 const EditProducts = () => {
 
   const { register, handleSubmit, formState: { errors }, } = useForm();
@@ -19,6 +20,7 @@ const EditProducts = () => {
     doApiInit();
   },[])
 
+  
   const doApiInit = async () => {
     let url = API_URL + "/products/single/" + params["id"];
     try {
@@ -56,6 +58,7 @@ const EditProducts = () => {
   return (
     <div className="overflow-hidden w-full rounded-lg border border-gray-200 shadow-md m-5">
       <AuthAdmin />
+      
 
       <h1 className="text-xl text-center mt-2">Edit product</h1>
 
