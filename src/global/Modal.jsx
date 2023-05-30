@@ -3,11 +3,11 @@ import PropTypes from "prop-types";
 export const Modal = ({
   title,
   footer,
-  children,
+  children,//
   onClose,
   width,
-  closeBtn,
-  ...props
+  closeBtn, //
+  ...props //
 }) => {
   return (
     <div
@@ -18,14 +18,14 @@ export const Modal = ({
         id="modal"
         className="bg-[#121212] text-gray-200 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-lg px-4 flex flex-col divide-y-[1px] divide-gray-400"
         style={{ width }}
-        {...props}
+        {...props} //
       >
         <header className="flex items-center justify-between py-2">
           {typeof title === "string" ? (
             <div className="text-2xl font-semibold">{title}</div>
           ) : ( title )}
 
-          {closeBtn && (
+          {closeBtn && ( ///
             <div
               id="close-btn"
               className="font-mono text-3xl font-semibold text-gray-400 p-1.5 hover:text-red-700 hover:bg-white rounded-lg text-center align-middle leading-4 cursor-pointer"
