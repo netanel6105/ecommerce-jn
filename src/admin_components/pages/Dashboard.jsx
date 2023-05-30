@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { TOKEN_KEY } from "../../services/services";
 import { Modal } from "../../global/Modal";
+import AuthAdmin from "../auth/AuthAdmin";
 
 const Dashboard = () => {
   const nav = useNavigate();
@@ -14,6 +15,7 @@ const Dashboard = () => {
 
   return (
     <div className="overflow-hidden w-screen rounded-lg border border-gray-200 shadow-md m-5">
+      <AuthAdmin/>
       <div className="bg-gray-800 flex p-4">
 
         <div className="">
