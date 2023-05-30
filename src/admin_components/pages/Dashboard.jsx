@@ -52,7 +52,7 @@ const Dashboard = () => {
                   </div>
                 }
               >
-                Do you sure??
+                Are you sure ?
               </Modal>
             )}
           </div>
