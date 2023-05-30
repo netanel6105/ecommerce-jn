@@ -56,7 +56,7 @@ const UserList = () => {
     try {
       let data = await doApiMethod(url, "DELETE");
       if (data.deletedCount) {
-        toast.info("user deleted");
+        toast.info("User Deleted");
         doApi();
       }
     } catch (err) {
