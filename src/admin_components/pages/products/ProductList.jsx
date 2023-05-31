@@ -16,7 +16,7 @@ const ProductList = () => {
 
   useEffect(() => {
     doApi();
-  }, [getQuery]);
+  }, [getQuery,ar]);
 
   const doApi = async () => {
     let perPage = getQuery.get("perPage") || 5;
