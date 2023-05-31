@@ -11,7 +11,7 @@ import CategoryList from "../admin_components/pages/category/categoryList";
 import ProductList from "../admin_components/pages/products/ProductList";
 
 import Comment from "../admin_components/pages/Comment";
-import ToDolist from "../admin_components/pages/ToDolist";
+import ToDolist from "../admin_components/pages/todo/ToDolist";
 import EditProducts from "../admin_components/pages/products/EditProducts";
 import AddUser from "../admin_components/pages/users/AddUser";
 import AddProduct from "../admin_components/pages/products/AddProduct";
