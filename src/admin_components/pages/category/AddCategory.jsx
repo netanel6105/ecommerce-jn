@@ -93,7 +93,7 @@ const AddCategory = () => {
             {/* info */}
             <div className="mb-6">
               <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                {" "}
+                
                 info
               </label>
               <input
@@ -104,8 +104,8 @@ const AddCategory = () => {
               />
               {errors.info && (
                 <div className="text-danger">
-                  {" "}
-                  * Enter valid info (min 2 chars){" "}
+                  
+                  * Enter valid info (min 2 chars)
                 </div>
               )}
             </div>

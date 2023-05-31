@@ -40,24 +40,23 @@ const CategoryList = () => {
     }
   }
 
-  const onDeleteCat = async(_delId) =>{
-    if(!window.confirm("Delete category??")){
-      return;
-    }
-    let url = API_URL+"/categories"+_delId;
+  const onDelete = async (_delId) => {
+    // if (!window.confirm("Delete app?")) {
+    //   return;
+    // }
+
+    let url = API_URL + "/categories/" + _delId;
     try {
-      let data = await doApiMethod(url,"DELETE");
-      if(data.deletedCount){
-        toast.info("Category Deleted");
+      let data = await doApiMethod(url, "DELETE");
+      if (data.deletedCount) {
+        toast.info("category Deleted");
         doApi();
       }
-    }
-     catch (err) {
+    } catch (err) {
       console.log(err);
-      alert("There are problem!!");
+      alert("There problem , come back late");
     }
-   
-  }
+  };
 
 
 
@@ -163,7 +162,7 @@ const CategoryList = () => {
                               <button
                                 className="bg-green-600 rounded-full py-2 px-3  font-bold"
                                 onClick={() => {
-                                  onDeleteCat(item._id);
+                                  onDelete(item._id);
                                   setModalOpen(false);
                                 }}
                               >
