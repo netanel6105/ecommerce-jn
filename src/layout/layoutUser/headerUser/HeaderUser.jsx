@@ -1,9 +1,21 @@
-import React from 'react'
+import React from "react";
+import { CiSearch } from "react-icons/ci";
 
 const HeaderUser = () => {
   return (
-    <div>HeaderUser</div>
-  )
-}
+    <div className="flex flex-row justify-around">
+      <div>J&N</div>
 
-export default HeaderUser
+      <div>
+        <CiSearch />
+      </div>
+
+      <div className="flex gap-5">
+        <p>Register</p>
+        <p>Login</p>
+      </div>
+    </div>
+  );
+};
+
+export default HeaderUser;
