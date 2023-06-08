@@ -5,9 +5,8 @@ const Home = () => {
     <div>
       {/* Image */}
       <img
-        src="./public/assets/ecommerce_homebg.jpg"
-        style={{backgroundImage:`url(/public/assets/ecommerce_homebg.jpg)`}}
-        className="w-full"
+        src="./assets/ecommerce_homebg.jpg"
+        className="w-full h-[500px] object-cover xl:h-[650px]"
         alt="Home Page"
       />
 

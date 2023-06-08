@@ -17,20 +17,22 @@ import AddUser from "../admin_components/pages/users/AddUser";
 import AddProduct from "../admin_components/pages/products/AddProduct";
 import EditCategory from "../admin_components/pages/category/EditCategory";
 import AddCategory from "../admin_components/pages/category/AddCategory";
-
+import Home from "../client_components/Home";
 
 const AppRouter = () => {
   return (
     <Router>
       <MyContext.Provider value={{}}>
         <Routes>
-          <Route path="/" element={<LayoutUser />}></Route>
+          <Route path="/" element={<LayoutUser />}>
+            <Route path="/home" element={<Home />} />
+          </Route>
 
           {/* Admin Layout */}
           <Route path="/admin" element={<LayoutAdmin />}>
             <Route path="/admin/dashboard" element={<Dashboard />} />
             <Route path="/admin/login" element={<AdminLogin />} />
-           
+
             <Route path="/admin/category" element={<CategoryList />} />
             <Route path="/admin/category/edit/:id" element={<EditCategory />} />
             <Route path="/admin/category/new" element={<AddCategory />} />
@@ -39,9 +41,8 @@ const AppRouter = () => {
             <Route path="/admin/product/edit/:id" element={<EditProducts />} />
             <Route path="/admin/product/new" element={<AddProduct />} />
 
-
             <Route path="/admin/users" element={<UserList />} />
-            <Route path="/admin/users/add" element={<AddUser/>}/>
+            <Route path="/admin/users/add" element={<AddUser />} />
 
             <Route path="/admin/comment" element={<Comment />} />
             <Route path="/admin/todo" element={<ToDolist />} />
