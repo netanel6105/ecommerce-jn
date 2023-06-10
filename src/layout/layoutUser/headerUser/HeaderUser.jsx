@@ -6,7 +6,7 @@ const HeaderUser = () => {
   return (
     <div className="flex flex-row justify-around p-4 bg-neutral-800">
       <Link
-        to="/category"
+        to="/"
         className="font-bold text-lg text-white hover:text-yellow-400"
       >
         J&N

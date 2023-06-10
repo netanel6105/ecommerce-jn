@@ -19,14 +19,22 @@ import EditCategory from "../admin_components/pages/category/EditCategory";
 import AddCategory from "../admin_components/pages/category/AddCategory";
 import Home from "../client_components/Home";
 
+import PageProductList from "../client_components/productList/PageProductList";
+
 const AppRouter = () => {
   return (
     <Router>
       <MyContext.Provider value={{}}>
         <Routes>
           <Route path="/" element={<LayoutUser />}>
-            <Route path="/home" element={<Home />} />
+            <Route index element={<Home />} />
+            <Route path="/category/:catName" element={<PageProductList />} />
+
           </Route>
+
+
+
+
 
           {/* Admin Layout */}
           <Route path="/admin" element={<LayoutAdmin />}>

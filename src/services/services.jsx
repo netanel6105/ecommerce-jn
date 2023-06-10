@@ -40,3 +40,11 @@ export const doApiMethod = async(_url,_method,_body = {}) => {
    throw err;
   }
 }
+
+// בודק אם התמונה מקומית ואם כן מוסיף לה את הכתובת של השרת
+export const fixImageUrl = (_imgUrl) => {
+  if(!_imgUrl.includes("://")){
+   return API_URL+_imgUrl;
+  }
+  return _imgUrl
+}

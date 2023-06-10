@@ -1,17 +1,17 @@
 import React from "react";
+import ImgStrip from "./home/ImgStrip";
+import CategoryList from "./home/CategoryList";
 
 const Home = () => {
   return (
-    <div>
-      {/* Image */}
-      <img
-        src="./assets/ecommerce_homebg.jpg"
-        className="w-full h-[500px] object-cover xl:h-[650px]"
-        alt="Home Page"
-      />
+    <React.Fragment>
 
-      {/* Categories */}
-    </div>
+      <ImgStrip/>
+
+      <main>
+        <CategoryList/>
+      </main>
+    </React.Fragment>
   );
 };
 
