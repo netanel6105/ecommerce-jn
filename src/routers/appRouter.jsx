@@ -20,6 +20,8 @@ import AddCategory from "../admin_components/pages/category/AddCategory";
 import Home from "../client_components/Home";
 
 import PageProductList from "../client_components/productList/PageProductList";
+import Register from "../client_components/userPages/Register";
+import Login from "../client_components/userPages/Login";
 
 const AppRouter = () => {
   return (
@@ -29,6 +31,8 @@ const AppRouter = () => {
           <Route path="/" element={<LayoutUser />}>
             <Route index element={<Home />} />
             <Route path="/category/:catName" element={<PageProductList />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/login" element={<Login />} />
 
           </Route>
 

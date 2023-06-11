@@ -1,8 +1,21 @@
-import React from "react";
+import React, { useContext } from "react";
 import { CiSearch } from "react-icons/ci";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
+import { TOKEN_KEY } from "../../../services/services";
+
 
 const HeaderUser = () => {
+
+const nav = useNavigate();
+
+
+const logout = () =>{
+  localStorage.removeItem(TOKEN_KEY);
+  toast.info('you logged out, see you soon ')
+  nav("/");
+}
+ 
   return (
     <div className="flex flex-row justify-around p-4 bg-neutral-800">
       <Link
@@ -21,12 +34,18 @@ const HeaderUser = () => {
         />
       </div>
 
+        {!localStorage["token"]?
       <div className="flex gap-5 hover:cursor-pointer">
-        <p className="font-semibold text-white hover:text-yellow-400">
+        <Link to="/register" className="font-semibold text-white hover:text-yellow-400">
           Register
-        </p>
-        <p className="font-semibold text-white hover:text-yellow-400">Login</p>
+        </Link>
+        <Link to="/login" className="font-semibold text-white hover:text-yellow-400">Login</Link>
       </div>
+       :
+      <div className="bg-red-700 rounded-full py-1 px-3 font-bold">
+        <button onClick={ logout } className="text-white">Logout</button>
+      </div>
+    }
     </div>
   );
 };
