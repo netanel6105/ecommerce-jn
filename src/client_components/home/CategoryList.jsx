@@ -18,27 +18,24 @@ const CategoryList = () => {
   };
 
   return (
-    <div className="w-full">
-      {ar.map((item, i) => {
-        return (
+<div className="w-full flex flex-col items-center">
+  {ar.map((item, i) => {
+    return (
+      <div className="py-1 w-[1300px] h-[500px] flex items-center justify-center font-semibold" onClick={() => { nav("/category/" + item.category_id); }} key={item._id} >
 
-          <div className="py-1 w-[1300px] justify-center"
-            onClick={() => { nav("/category/" + item.category_id);}}
-            key={item._id} >
-
-            <div className="h-[500px] w-[1300px] text-center justify-center font-semibold  object-contain bg-no-repeat items-center"
-             style={{ backgroundImage: `url(${item.img_url})` }} >
-
-              <h3 className="">
-                <Link to={"/category/" + item.category_id}>{item.name}</Link>
-              </h3>
-
-            </div>
-
+        <div className="relative w-full h-full">
+          <img src={item.img_url} className="w-full h-full object-cover" alt={item.name} />
+          <div className="absolute inset-0 flex items-center justify-center">
+            <h3 className="text-white text-8xl">
+              <Link to={"/category/" + item.category_id}>{item.name}</Link>
+            </h3>
           </div>
-        );
-      })}
-    </div>
+        </div>
+          
+      </div>
+    );
+  })}
+</div>
   );
 };
 
