@@ -18,17 +18,16 @@ const CategoryList = () => {
   };
 
   return (
-    <div className="">
+    <div className="w-full">
       {ar.map((item, i) => {
         return (
-          <div className="py-2 items-center justify-center"
-            onClick={() => { nav("/category/" + item.category_id);}}
-            key={item._id}
-            >
 
-            <div className="bg-category text-center justify-center font-semibold h-[150px] w-[150px] object-contain bg-no-repeat items-center"
-             style={{ backgroundImage: `url(${item.img_url})` }}
-            >
+          <div className="py-1 w-[1300px] justify-center"
+            onClick={() => { nav("/category/" + item.category_id);}}
+            key={item._id} >
+
+            <div className="h-[500px] w-[1300px] text-center justify-center font-semibold  object-contain bg-no-repeat items-center"
+             style={{ backgroundImage: `url(${item.img_url})` }} >
 
               <h3 className="">
                 <Link to={"/category/" + item.category_id}>{item.name}</Link>
