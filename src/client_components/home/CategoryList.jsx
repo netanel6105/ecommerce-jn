@@ -18,25 +18,25 @@ const CategoryList = () => {
   };
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-4 gap-3">
+    <div className="flex object-cover">
       {ar.map((item, i) => {
         return (
-          <article
+          <div className="py-2 items-center justify-center"
             onClick={() => { nav("/category/" + item.category_id);}}
             key={item._id}
-            className="col-span-1 md:col-span-3 shadow mt-5">
+            >
 
-            <div className=""
+            <div className="text-center justify-center font-semibold h-[150px] w-[150px] object-contain bg-no-repeat items-center"
              style={{ backgroundImage: `url(${item.img_url})` }}
             >
 
-              <h3>
+              <h3 className="">
                 <Link to={"/category/" + item.category_id}>{item.name}</Link>
               </h3>
 
             </div>
 
-          </article>
+          </div>
         );
       })}
     </div>

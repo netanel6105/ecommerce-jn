@@ -132,7 +132,7 @@ const ProductList = () => {
                   className="px-6 py-4 cursor-pointer"
                   title={item.description}
                 >
-                  {item.description.substring(1, 15)}
+                  {item.description.substring(0, 15)}
                 </td>
                 {/*gender  */}
                 <td className="px-6 py-4">{item.gender}</td>

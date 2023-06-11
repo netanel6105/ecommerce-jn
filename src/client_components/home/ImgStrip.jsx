@@ -5,7 +5,7 @@ const ImgStrip = () => {
     <div>
       <img
         src="./assets/ecommerce_homebg.jpg"
-        className="w-full h-[500px] object-cover xl:h-[650px]"
+        className="w-full h-[400px] object-cover xl:h-[650px]"
         alt="Home Page"
       />
     </div>

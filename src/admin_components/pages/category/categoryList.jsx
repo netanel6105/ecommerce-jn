@@ -119,7 +119,7 @@ const CategoryList = () => {
 
 
             {/* description */}
-            <td className="px-6 py-4 cursor-pointer" title={item.info}>{item.info.substring(1,15)}</td>
+            <td className="px-6 py-4 cursor-pointer" title={item.info}>{item.info.substring(0,15)}</td>
             {/*category_id  */}
             <td className="px-6 py-4">{item.category_id}</td>
 
