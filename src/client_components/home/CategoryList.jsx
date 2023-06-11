@@ -18,7 +18,7 @@ const CategoryList = () => {
   };
 
   return (
-    <div className="flex object-cover">
+    <div className="">
       {ar.map((item, i) => {
         return (
           <div className="py-2 items-center justify-center"
@@ -26,7 +26,7 @@ const CategoryList = () => {
             key={item._id}
             >
 
-            <div className="text-center justify-center font-semibold h-[150px] w-[150px] object-contain bg-no-repeat items-center"
+            <div className="bg-category text-center justify-center font-semibold h-[150px] w-[150px] object-contain bg-no-repeat items-center"
              style={{ backgroundImage: `url(${item.img_url})` }}
             >
 
