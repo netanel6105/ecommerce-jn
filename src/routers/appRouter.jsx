@@ -22,6 +22,7 @@ import Home from "../client_components/Home";
 import PageProductList from "../client_components/productList/PageProductList";
 import Register from "../client_components/userPages/Register";
 import Login from "../client_components/userPages/Login";
+import GenderList from "../client_components/home/GenderList";
 
 const AppRouter = () => {
   return (
@@ -33,6 +34,7 @@ const AppRouter = () => {
             <Route path="/category/:catName" element={<PageProductList />} />
             <Route path="/register" element={<Register />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/category/gender" element={<GenderList />} />
 
           </Route>
 

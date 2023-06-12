@@ -9,6 +9,15 @@ const HeaderUser = () => {
 
 const nav = useNavigate();
 
+// const person ={
+//   name:"yarin",
+//   age:26
+// }
+
+// person.age
+// person['age']
+// params.id
+// params['id']
 
 const logout = () =>{
   localStorage.removeItem(TOKEN_KEY);

@@ -27,6 +27,7 @@ const CategoryList = () => {
           <img src={item.img_url} className="w-full h-full object-cover" alt={item.name} />
           <div className="absolute inset-0 flex items-center justify-center">
             <h3 className="text-white text-8xl">
+              {/* <Link to={"/category/" + item.category_id}>{item.name}</Link> */}
               <Link to={"/category/" + item.category_id}>{item.name}</Link>
             </h3>
           </div>

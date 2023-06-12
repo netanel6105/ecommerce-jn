@@ -20,7 +20,7 @@ function App() {
   
 useEffect(() => {
   doUserApi()
-},[])
+},[localStorage[TOKEN_KEY]])
 
 const doUserApi = async() => {
   if(localStorage[TOKEN_KEY]){

@@ -19,6 +19,7 @@ const Login = () => {
       }
 
       const doApiLog = async(bodyData) => {
+        
         try{
           let url = API_URL+"/users/login";
           let data = await doApiMethod(url,"POST",bodyData);
@@ -28,10 +29,12 @@ const Login = () => {
           // navigate to categoriesList.js
           nav("/")
           toast.info('you logged in')
-          doUserApi();
+          if(localStorage.getItem(TOKEN_KEY))
+          await doUserApi();
         }
         catch(err){
           console.log(err);
+          if(err.response.data.error_code == 1 || err.response.data.error_code == 2)
           toast.error("Email or passwrod wrong!");
         }
         
