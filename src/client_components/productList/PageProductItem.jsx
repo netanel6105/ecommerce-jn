@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import { fixImageUrl } from '../../services/services';
+// import { fixImageUrl } from '../../services/services';
 
 const PageProductItem = (props) => {
 

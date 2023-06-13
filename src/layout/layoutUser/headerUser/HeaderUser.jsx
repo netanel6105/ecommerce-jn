@@ -3,6 +3,7 @@ import { CiSearch } from "react-icons/ci";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { TOKEN_KEY } from "../../../services/services";
+import CategoryStrip from "../../../client_components/home/CategoryStrip";
 
 
 const HeaderUser = () => {
@@ -26,6 +27,7 @@ const logout = () =>{
 }
  
   return (
+    
     <div className="flex flex-row justify-around p-4 bg-neutral-800">
       <Link
         to="/"
@@ -55,7 +57,10 @@ const logout = () =>{
         <button onClick={ logout } className="text-white">Logout</button>
       </div>
     }
+
     </div>
+
+    
   );
 };
 
